@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
+
+ln -sfv "$DOTFILES_DIR/files/.bashrc" ~/.bashrc
+ln -sfv "$DOTFILES_DIR/files/.bash_aliases" ~/.bash_aliases
+ln -sfv "$DOTFILES_DIR/files/.gitconfig" ~/.gitconfig
+ln -sfv "$DOTFILES_DIR/files/.gitignore_global" ~/.gitignore_global
+ln -sfv "$DOTFILES_DIR/files/.vimrc" ~/.vimrc
