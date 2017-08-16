@@ -48,6 +48,9 @@ Plug 'joshdick/onedark.vim'
 " Ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Tmux integration
+Plug 'christoomey/vim-tmux-navigator'
+
 " End vim-plug
 call plug#end()
 
@@ -58,15 +61,7 @@ let g:ctrlp_show_hidden = 1
 syntax on
 set background=dark
 colorscheme onedark
-
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+let g:onedark_termcolors = 16
 
 " Elm improvements
 let g:elm_detailed_complete = 1
