@@ -64,7 +64,8 @@ set nowrap            " set no wrap for big lines
 set textwidth=0
 set wrapmargin=0
 set autoindent        " set autoindent
-set nobackup          " set no backup
+set nobackup          " disable backup files
+set nowritebackup     " disable backup files
 set backspace=2       " backspace over everything
 set ai
 set incsearch
