@@ -1,0 +1,17 @@
+session_name: workspace
+start_directory: ~/workspace
+windows:
+  - window_name: platform
+    panes:
+    - shell_command:
+      - cd platform
+      - sudo foreman s
+  - window_name: portal
+    layout: main-vertical
+    panes:
+    - shell_command:
+      - cd portal
+      - sudo yarn start
+    - shell_command:
+      - cd portal
+      - vim .
