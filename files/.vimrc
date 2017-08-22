@@ -89,7 +89,6 @@ let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
 let g:ale_fixers = {'javascript': ['prettier_standard']}
-let g:ale_linters = {'javascript': ['']}
 let g:ale_fix_on_save = 1
 
 
