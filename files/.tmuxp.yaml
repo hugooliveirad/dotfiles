@@ -6,6 +6,11 @@ windows:
     - shell_command:
       - cd platform
       - sudo foreman s
+  - window_name: top-scheduler
+    panes:
+    - shell_command:
+      - cd top-scheduler
+      - sudo foreman s
   - window_name: portal
     layout: main-vertical
     panes:
