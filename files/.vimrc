@@ -62,7 +62,6 @@ set tabstop=2
 set shiftwidth=2
 set hidden            " just hide the buffer when switching files
 set ruler             " show cursor position
-set nowrap            " set no wrap for big lines
 set textwidth=0
 set wrapmargin=0
 set autoindent
