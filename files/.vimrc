@@ -52,33 +52,60 @@ Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " General configs
+set nocompatible      " remove compatibility quirks
+set modelines=0       " prevents security exploits
 set encoding=utf-8
 set wildmenu          " set vim menu
+set wildmode=list:longest
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set hidden            " just hide the buffer when switching files
 set ruler             " show cursor position
-set hlsearch          " set highlight for search
 set nowrap            " set no wrap for big lines
 set textwidth=0
 set wrapmargin=0
-set autoindent        " set autoindent
-set nobackup          " disable backup files
-set nowritebackup     " disable backup files
+set autoindent
 set backspace=2       " backspace over everything
 set ai
-set incsearch
 set scrolloff=3       " offsets the scroll when possible
 set laststatus=2      " always shows the status line
+set foldlevelstart=50 " files open expanded
+set foldmethod=indent " use decent folding
+set spell             " correct me!
+set list              " show hidden chars, EOL, and trailing spaces
+set lcs=tab:»·,trail:·
+
+let mapleader = "'"
+
 set ignorecase        " case-insensitive search
 set smartcase         " but case-sensitive if contains capital letter
-set foldlevelstart=50 " Files open expanded
-set foldmethod=indent " Use decent folding
+set incsearch
+set gdefault
+set showmatch
+set hlsearch          " set highlight for search
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
 
-" FZF options
+set noswapfile
+set nobackup          " disable backup files
+set nowritebackup     " disable backup files
+set undofile
+set undodir=$HOME/.vim/undo " persist undo info here
+set undolevels=1000
+set undoreload=10000        " undo info survives reloads
+
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+nnoremap ; :
+
+" FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-map <C-p> :FZF<CR>
+map <C-t> :FZF<CR>
 
 " Colors
 syntax on
@@ -93,21 +120,30 @@ let g:ale_fixers = {'javascript': ['prettier_standard']}
 let g:ale_fix_on_save = 1
 
 
-" Undo improvements
-set undofile
-set undodir=$HOME/.vim/undo " persist undo info here
+" Search with AG
+nnoremap <leader>a :Ag
 
-set undolevels=1000
-set undoreload=10000        " undo info survives reloads
+" Edit vimrc
+nnoremap <leader>ev <C-w><C-v><C-l>:e $HOME/.vimrc<cr>
 
-" Show hidden chars, EOL, and trailing spaces
-set list
-set lcs=tab:»·
-set lcs+=trail:·
+" Splitting bindings
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>h <C-w>s<C-w>j
 
-" Map leaders
-let mapleader = ','
-let localmapleader = '\\'
+" Fugitive bindings
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit --verbose<cr>
+nnoremap <leader>gdd :Gdiff<cr>
+nnoremap <leader>gdm :Gdiff origin/master<cr>
+
+" Easymotion bidings
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+inoremap jj <ESC>
 
 " Toggles folding with space
 nnoremap <Space> za
