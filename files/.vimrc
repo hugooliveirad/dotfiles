@@ -71,7 +71,6 @@ set scrolloff=3       " offsets the scroll when possible
 set laststatus=2      " always shows the status line
 set foldlevelstart=50 " files open expanded
 set foldmethod=indent " use decent folding
-set spell             " correct me!
 set list              " show hidden chars, EOL, and trailing spaces
 set lcs=tab:»·,trail:·
 
@@ -104,7 +103,7 @@ nnoremap ; :
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-map <C-t> :FZF<CR>
+map <C-p> :FZF<CR>
 
 " Colors
 syntax on
