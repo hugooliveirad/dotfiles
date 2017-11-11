@@ -106,7 +106,8 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 map <C-p> :FZF<CR>
 
 " Colors
-syntax on
+set background=dark
+syntax enable
 colorscheme onedark
 let g:onedark_termcolors = 16
 

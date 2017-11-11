@@ -15,6 +15,7 @@ if [ ! -d ~/.bash-git-prompt ]; then
 fi
 
 
+ln -sfv "$DOTFILES_DIR/files/.bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/files/.bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/files/.bash_aliases" ~/.bash_aliases
 ln -sfv "$DOTFILES_DIR/files/.gitconfig" ~/.gitconfig
