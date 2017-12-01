@@ -115,7 +115,7 @@ let g:onedark_termcolors = 16
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
-let g:ale_fixers = {'javascript': ['prettier_standard']}
+let g:ale_fixers = {'javascript': []}
 let g:ale_fix_on_save = 1
 
 
