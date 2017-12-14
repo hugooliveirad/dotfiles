@@ -96,3 +96,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Yarn configs
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Utils functions
+
+function pid-for-port {
+  sudo netstat -nlp | grep ":$1"
+}
+
