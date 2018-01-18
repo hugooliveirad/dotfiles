@@ -1,5 +1,12 @@
 " Hugo's vimfiles
 
+" Installs vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Enable vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -74,7 +81,7 @@ set foldmethod=indent " use decent folding
 set list              " show hidden chars, EOL, and trailing spaces
 set lcs=tab:»·,trail:·
 
-let mapleader = "'"
+let mapleader = "\<Space>"
 
 set ignorecase        " case-insensitive search
 set smartcase         " but case-sensitive if contains capital letter
@@ -82,9 +89,7 @@ set incsearch
 set gdefault
 set showmatch
 set hlsearch          " set highlight for search
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+nnoremap <leader>c :noh<cr>
 
 set noswapfile
 set nobackup          " disable backup files
@@ -116,14 +121,14 @@ let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
 let g:ale_fixers = {'javascript': []}
+let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
 
-
 " Search with AG
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag 
 
 " Edit vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e $HOME/.vimrc<cr>
+nnoremap <leader>ev :tabe $HOME/.vimrc<cr>
 
 " Splitting bindings
 nnoremap <leader>v <C-w>v<C-w>l
@@ -136,16 +141,14 @@ nnoremap <leader>gdd :Gdiff<cr>
 nnoremap <leader>gdm :Gdiff origin/master<cr>
 
 " Easymotion bidings
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <leader>j <Plug>(easymotion-bd-w)
+nmap <leader>j <Plug>(easymotion-overwin-w)
 
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-inoremap jj <ESC>
+inoremap kj <ESC>
 
 " Toggles folding with space
-nnoremap <Space> za
+nnoremap <leader>f za
 
 " Navigation bindings
 nmap <C-h> <C-w>h

@@ -1,6 +1,6 @@
 [user]
     name = Hugo Bessa
-	email = eu@hugobessa.com.br
+    email = eu@hugobessa.com.br
 
 [github]
     user = hugobessaa
@@ -38,6 +38,9 @@
 
 [mergetool]
     prompt = false
+
+[pull]
+    rebase = true
 
 [push]
     default = current
