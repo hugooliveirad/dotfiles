@@ -4,6 +4,9 @@ set -e
 
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
+# Installs vim
+apt-get install vim
+
 # install tpm
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
