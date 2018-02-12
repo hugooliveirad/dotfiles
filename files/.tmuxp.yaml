@@ -9,7 +9,7 @@ windows:
   - window_name: math
     panes:
     - shell_command:
-      - R
+      - R -q
   - window_name: platform
     panes:
     - shell_command:
