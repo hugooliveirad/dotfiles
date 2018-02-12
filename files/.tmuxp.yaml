@@ -6,15 +6,14 @@ windows:
     - shell_command:
       - cd ~/Dropbox/hugo-docs
       - vim .
+  - window_name: math
+    panes:
+    - shell_command:
+      - R
   - window_name: platform
     panes:
     - shell_command:
       - cd platform
-      - foreman s
-  - window_name: top-scheduler
-    panes:
-    - shell_command:
-      - cd top-scheduler
       - foreman s
   - window_name: portal
     layout: main-vertical
