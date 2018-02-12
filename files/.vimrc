@@ -145,8 +145,6 @@ map  <leader>j <Plug>(easymotion-bd-w)
 nmap <leader>j <Plug>(easymotion-overwin-w)
 
 
-inoremap kj <ESC>
-
 " Toggles folding with space
 nnoremap <leader>f za
 
