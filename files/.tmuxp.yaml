@@ -14,13 +14,11 @@ windows:
     panes:
     - shell_command:
       - cd platform
-      - foreman s
   - window_name: portal
     layout: main-vertical
     panes:
     - shell_command:
       - cd portal
-      - yarn start
     - shell_command:
       - cd portal
       - vim .
