@@ -1,11 +1,10 @@
 session_name: workspace
 start_directory: ~/workspace
 windows:
-  - window_name: hugo-docs
+  - window_name: dropbox
     panes:
     - shell_command:
-      - cd ~/Dropbox/hugo-docs
-      - vim .
+      - cd ~/Dropbox/
   - window_name: math
     panes:
     - shell_command:
