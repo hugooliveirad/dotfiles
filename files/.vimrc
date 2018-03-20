@@ -47,7 +47,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 
 " Colors
-Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -113,8 +113,7 @@ map <C-p> :FZF<CR>
 " Colors
 set background=dark
 syntax enable
-colorscheme onedark
-let g:onedark_termcolors = 16
+colorscheme nord
 
 " Elm improvements
 let g:elm_detailed_complete = 1
