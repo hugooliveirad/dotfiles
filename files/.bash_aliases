@@ -41,3 +41,7 @@ alias v="vim ."
 alias y="yarn"
 alias yr="yarn run"
 alias ys="yarn start"
+
+# keyboard
+alias kbd-enable="xinput enable \"AT Translated Set 2 keyboard\""
+alias kbd-disable="xinput disable \"AT Translated Set 2 keyboard\""
