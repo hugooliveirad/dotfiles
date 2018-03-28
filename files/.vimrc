@@ -55,6 +55,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
+" Airline status bar
+Plug 'vim-airline/vim-airline'
+
 " End vim-plug
 call plug#end()
 
@@ -104,7 +107,6 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-nnoremap ; :
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
@@ -115,6 +117,9 @@ set background=dark
 syntax enable
 colorscheme nord
 
+" Airline settins
+let g:airline#extensions#ale#enabled = 1
+
 " Elm improvements
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
@@ -122,6 +127,8 @@ let g:elm_format_autosave = 1
 let g:ale_fixers = {'javascript': []}
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
+
+nnoremap ; :
 
 " Search with AG
 nnoremap <leader>a :Ag 
