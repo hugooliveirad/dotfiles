@@ -93,7 +93,9 @@ fi
 
 # Rbenv configs
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
+# FZF stuff
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export NVM_DIR="$HOME/.nvm"
