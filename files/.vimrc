@@ -58,6 +58,18 @@ Plug 'christoomey/vim-tmux-navigator'
 " Airline status bar
 Plug 'vim-airline/vim-airline'
 
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+
+" Rails
+Plug 'tpope/vim-rails'
+
+" Cucumber
+Plug 'tpope/vim-cucumber'
+
+" Rspec
+Plug 'thoughtbot/vim-rspec'
+
 " End vim-plug
 call plug#end()
 
