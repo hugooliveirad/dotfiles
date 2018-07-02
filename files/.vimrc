@@ -55,9 +55,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" Airline status bar
-Plug 'vim-airline/vim-airline'
-
 " Ruby
 Plug 'vim-ruby/vim-ruby'
 
@@ -69,6 +66,9 @@ Plug 'tpope/vim-cucumber'
 
 " Rspec
 Plug 'thoughtbot/vim-rspec'
+
+" JavaScript improvement
+Plug 'ternjs/tern_for_vim'
 
 " End vim-plug
 call plug#end()
@@ -129,14 +129,11 @@ set background=dark
 syntax enable
 colorscheme nord
 
-" Airline settins
-let g:airline#extensions#ale#enabled = 1
-
 " Elm improvements
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
-let g:ale_fixers = {'javascript': []}
+let g:ale_fixers = {'javascript': ['prettier']}
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
 
