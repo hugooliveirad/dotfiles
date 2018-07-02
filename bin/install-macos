@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -ex
+
+DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
+
+# install brew
+if [ ! hash brew 2>/dev/null ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# install basic tools
+brew update
+brew upgrade
+brew install node tmux git python python3 the_silver_searcher
+brew install vim --with-override-system-vi
+
+# install rust
+if [ ! hash rustc 2>/dev/null ]; then
+  curl https://sh.rustup.rs -sSf | sh
+fi
+
+# Install tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+# Install pip
+sudo easy_install pip
+
+# Install tmuxp
+sudo pip install --user tmuxp
+
+# Install git prompt
+if [ ! -d ~/.bash-git-prompt ]; then
+  git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+fi
