@@ -93,7 +93,7 @@ fi
 
 # Rbenv configs
 export PATH="$HOME/.rbenv/bin:$PATH"
-[ hash rbenv 2>/dev/null ] && eval "$(rbenv init -)"
+command -v rbenv $>/dev/null && eval "$(rbenv init -)"
 
 # FZF stuff
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
