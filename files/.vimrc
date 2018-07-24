@@ -24,6 +24,7 @@ Plug 'tpope/vim-repeat'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
