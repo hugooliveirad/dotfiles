@@ -9,15 +9,4 @@ windows:
     panes:
     - shell_command:
       - R -q
-  - window_name: platform
-    panes:
-    - shell_command:
-      - cd platform
-  - window_name: portal
-    layout: main-vertical
-    panes:
-    - shell_command:
-      - cd portal
-    - shell_command:
-      - cd portal
-      - vim .
+  - window_name: workspace
