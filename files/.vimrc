@@ -1,14 +1,7 @@
 " Hugo's vimfiles
 
-" Installs vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Enable vim-plug
-call plug#begin('~/.vim/plugged')
 
 " Emmet vim
 Plug 'mattn/emmet-vim'
@@ -29,9 +22,6 @@ Plug 'tpope/vim-rhubarb'
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
 
-" Git timemachine
-Plug 'gregsexton/gitv'
-
 " EasyMotion (like avy for emacs)
 Plug 'easymotion/vim-easymotion'
 
@@ -40,9 +30,6 @@ Plug 'mbbill/undotree'
 
 " Surround
 Plug 'tpope/vim-surround'
-
-" Language extensions
-Plug 'sheerun/vim-polyglot'
 
 " Linting
 Plug 'w0rp/ale'
@@ -56,20 +43,15 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" Ruby
-Plug 'vim-ruby/vim-ruby'
+" Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Rails
-Plug 'tpope/vim-rails'
+" JavaScript Syntax
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
-" Cucumber
-Plug 'tpope/vim-cucumber'
-
-" Rspec
-Plug 'thoughtbot/vim-rspec'
-
-" JavaScript improvement
-Plug 'ternjs/tern_for_vim'
+" CSS3 syntax
+Plug 'hail2u/vim-css3-syntax'
 
 " End vim-plug
 call plug#end()
@@ -126,6 +108,11 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 map <C-p> :FZF<CR>
 
 " Colors
+if (empty($TMUX))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set termguicolors
+endif
+
 set background=dark
 syntax enable
 colorscheme nord
@@ -138,6 +125,10 @@ let g:ale_fixers = {'javascript': ['prettier']}
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 0
 
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" Easy commands
 nnoremap ; :
 
 " Search with AG
@@ -157,11 +148,9 @@ nnoremap <leader>gdd :Gdiff<cr>
 nnoremap <leader>gdm :Gdiff origin/master<cr>
 
 " Easymotion bidings
-map  <leader>j <Plug>(easymotion-bd-w)
-nmap <leader>j <Plug>(easymotion-overwin-w)
+map  <leader>j <Plug>(easymotion-bd-f)
 
-
-" Toggles folding with space
+" Folding bindings
 nnoremap <leader>f za
 
 " Navigation bindings

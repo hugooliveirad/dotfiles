@@ -34,6 +34,8 @@ alias be="bundle exec"
 
 # vim
 
+alias vim="nvim"
+alias vimdiff="nvim -d"
 alias v="vim ."
 
 # yarn
@@ -45,3 +47,9 @@ alias ys="yarn start"
 # keyboard
 alias kbd-enable="xinput enable \"AT Translated Set 2 keyboard\""
 alias kbd-disable="xinput disable \"AT Translated Set 2 keyboard\""
+
+# listing
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
