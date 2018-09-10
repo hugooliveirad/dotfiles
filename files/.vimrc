@@ -53,6 +53,9 @@ Plug 'mxw/vim-jsx'
 " CSS3 syntax
 Plug 'hail2u/vim-css3-syntax'
 
+" Elm Syntax
+Plug 'ElmCast/elm-vim'
+
 " End vim-plug
 call plug#end()
 
