@@ -32,6 +32,7 @@ sudo easy_install pip
 
 # Install tmuxp
 sudo pip install --user tmuxp
+sudo pip install --user neovim
 
 # Install git prompt
 if [ ! -d ~/.bash-git-prompt ]; then

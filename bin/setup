@@ -4,6 +4,8 @@ set -e
 
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
+mkdir -p "$HOME/.config/nvim/"
+
 ln -sfv "$DOTFILES_DIR/files/.bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/files/.bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/files/.bash_aliases" ~/.bash_aliases

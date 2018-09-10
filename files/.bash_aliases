@@ -34,9 +34,8 @@ alias be="bundle exec"
 
 # vim
 
-alias vim="nvim"
 alias vimdiff="nvim -d"
-alias v="vim ."
+alias v="nvim ."
 
 # yarn
 
