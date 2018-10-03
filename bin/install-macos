@@ -12,8 +12,9 @@ fi
 # install basic tools
 brew update
 brew upgrade
-brew install node tmux git python python3 the_silver_searcher
+brew install node tmux git python python3 the_silver_searcher nvim
 brew install vim --with-override-system-vi
+brew cask install spectacle iterm2 spotify licecap
 
 npm i -g elm-oracle elm-format@exp
 
