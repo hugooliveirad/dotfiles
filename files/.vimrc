@@ -43,18 +43,18 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " JavaScript Syntax
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
 
 " CSS3 syntax
 Plug 'hail2u/vim-css3-syntax'
 
 " Elm Syntax
 Plug 'ElmCast/elm-vim'
+
+" Polyglot
+Plug 'sheerun/vim-polyglot'
 
 " End vim-plug
 call plug#end()
