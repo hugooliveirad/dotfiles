@@ -40,3 +40,6 @@ sudo pip install --user neovim
 if [ ! -d ~/.bash-git-prompt ]; then
   git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 fi
+
+# Repeat keys please
+defaults write -g ApplePressAndHoldEnabled -bool false

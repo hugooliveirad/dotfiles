@@ -28,6 +28,9 @@ PROMPT_COMMAND="history -a"
 EDITOR="vim"
 VISUAL="vim"
 
+# iex history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -77,6 +80,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Yarn config
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# RabbitMQ config
+export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
 
 # Util functions
 function pid-for-port {

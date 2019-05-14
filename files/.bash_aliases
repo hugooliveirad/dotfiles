@@ -24,7 +24,7 @@ alias gst="git stash"
 alias gstp="git stash pop"
 
 alias gl="git log"
-alias glo="git log --oneline"
+alias glo="git log --pretty=format:\"%C(yellow)%h%C(reset) | %an | %ar | %C(cyan)%s%C(reset)%d\" --topo-order --graph --decorate"
 alias gls="git log --oneline | head"
 
 alias gd="git diff"

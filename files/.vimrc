@@ -53,6 +53,9 @@ Plug 'hail2u/vim-css3-syntax'
 " Elm Syntax
 Plug 'ElmCast/elm-vim'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 " Polyglot
 Plug 'sheerun/vim-polyglot'
 
@@ -116,17 +119,21 @@ if (empty($TMUX))
   set termguicolors
 endif
 
-set background=dark
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 syntax enable
-colorscheme nord
+color nord
+set background=dark
 
 " Elm improvements
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 
-let g:ale_fixers = {'javascript': ['prettier']}
+let g:ale_fixers = {'javascript.jsx': ['prettier'], 'javascript': ['prettier']}
 let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_fix_on_save = 0
+let g:ale_fix_on_save = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
@@ -136,6 +143,15 @@ nnoremap ; :
 
 " Search with AG
 nnoremap <leader>a :Ag 
+
+" Directory navigation bindings
+nnoremap <leader>- :Hex<cr>
+nnoremap <leader>\ :Vex<cr>
+nnoremap <leader>. :Ex<cr>
+
+" Tab navigation bindings
+nnoremap <End> gT
+nnoremap <Home> gt
 
 " Edit vimrc
 nnoremap <leader>ev :tabe $HOME/.vimrc<cr>
@@ -152,6 +168,8 @@ nnoremap <leader>gdm :Gdiff origin/master<cr>
 
 " Easymotion bidings
 map  <leader>j <Plug>(easymotion-bd-f)
+map , <Plug>(easymotion-bd-f)
+
 
 " Folding bindings
 nnoremap <leader>f za
@@ -168,7 +186,7 @@ imap <c-s> <esc>:w<CR>
 vmap <c-s> <esc>:w<CR>
 
 " Closing bindings
-nmap <c-q> :wq<CR>
-imap <c-q> <esc>:wq<CR>
-vmap <c-q> <esc>:wq<CR>
+nmap <c-q> :q<CR>
+imap <c-q> <esc>:q<CR>
+vmap <c-q> <esc>:q<CR>
 
