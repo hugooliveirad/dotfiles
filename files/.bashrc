@@ -65,24 +65,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Rbenv configs
-export PATH="$HOME/.rbenv/bin:$PATH"
-command -v rbenv $>/dev/null && eval "$(rbenv init -)"
-
 # FZF init
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# NVM config
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                      # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Yarn config
-export PATH="$HOME/.yarn/bin:$PATH"
-
-# RabbitMQ config
-export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
 
 # Util functions
 function pid-for-port {

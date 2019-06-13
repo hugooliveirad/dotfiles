@@ -12,12 +12,15 @@ fi
 # install basic tools
 brew update
 brew upgrade
-brew install nvm tmux git python python3 the_silver_searcher
-brew install vim --with-override-system-vi --with-python3
-brew cask install spectacle iterm2 spotify licecap
-brew cask install transmission
+brew install nvm tmux git python python3 the_silver_searcher vim
+brew cask install spectacle iterm2 spotify licecap transmission homebrew/cask-versions/firefox-developer-edition
 
-npm i -g elm-oracle elm-format@exp
+# install plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install plugs
+vim +:PlugInstall +:qa
 
 # install rust
 if [ ! hash rustc 2>/dev/null ]; then
@@ -31,10 +34,6 @@ fi
 
 # Install pip
 sudo easy_install pip
-
-# Install tmuxp
-sudo pip install --user tmuxp
-sudo pip install --user neovim
 
 # Install git prompt
 if [ ! -d ~/.bash-git-prompt ]; then
