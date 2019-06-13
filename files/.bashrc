@@ -56,6 +56,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# export PATH for node@8
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+
 # enable programmable completion features 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
