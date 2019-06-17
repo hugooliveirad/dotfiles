@@ -44,8 +44,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'christoomey/vim-tmux-navigator'
 
 " JavaScript Syntax
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " CSS3 syntax
 Plug 'hail2u/vim-css3-syntax'
@@ -55,9 +55,6 @@ Plug 'ElmCast/elm-vim'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
-
-" Polyglot
-Plug 'sheerun/vim-polyglot'
 
 " End vim-plug
 call plug#end()
