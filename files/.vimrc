@@ -2,13 +2,6 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-
-" Emmet vim
-Plug 'mattn/emmet-vim'
-
-" Editor config
-Plug 'editorconfig/editorconfig-vim'
-
 " Ag for searching projects
 Plug 'rking/ag.vim'
 
@@ -46,9 +39,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " JavaScript Syntax
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-
-" CSS3 syntax
-Plug 'hail2u/vim-css3-syntax'
 
 " Elm Syntax
 Plug 'ElmCast/elm-vim'
@@ -105,6 +95,7 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
+filetype plugin indent on
 
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
