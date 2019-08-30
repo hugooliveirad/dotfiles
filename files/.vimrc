@@ -2,6 +2,7 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'rking/ag.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
