@@ -1,53 +1,24 @@
 " Hugo's vimfiles
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
-" Ag for searching projects
-Plug 'rking/ag.vim'
-
-" Repeat commands
-Plug 'tpope/vim-repeat'
-
-" Git wrapper
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-
-" Git Gutter
-Plug 'airblade/vim-gitgutter'
-
-" EasyMotion (like avy for emacs)
-Plug 'easymotion/vim-easymotion'
-
-" Undo tree
-Plug 'mbbill/undotree'
-
-" Surround
-Plug 'tpope/vim-surround'
-
-" Linting
-Plug 'w0rp/ale'
-
-" Colors
-Plug 'arcticicestudio/nord-vim'
-
-" FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Tmux integration
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
+Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
 
-" JavaScript Syntax
+Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-
-" Elm Syntax
-Plug 'ElmCast/elm-vim'
-
-" Elixir
-Plug 'elixir-editors/vim-elixir'
+Plug 'arcticicestudio/nord-vim'
 
 " End vim-plug
 call plug#end()
+
+let mapleader = "\<Space>"
 
 " General configs
 set nocompatible      " remove compatibility quirks
@@ -72,7 +43,6 @@ set foldmethod=indent " use decent folding
 set list              " show hidden chars, EOL, and trailing spaces
 set lcs=tab:»·,trail:·
 
-let mapleader = "\<Space>"
 
 set ignorecase        " case-insensitive search
 set smartcase         " but case-sensitive if contains capital letter
@@ -101,30 +71,20 @@ filetype plugin indent on
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 map <C-p> :FZF<CR>
 
-" Colors
-if (empty($TMUX))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set termguicolors
-endif
-
 " set Vim-specific sequences for RGB colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 syntax enable
 color nord
 set background=dark
 
-" Elm improvements
-let g:elm_detailed_complete = 1
-let g:elm_format_autosave = 1
-
 let g:ale_fixers = {'javascript.jsx': ['prettier'], 'javascript': ['prettier']}
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript.jsx': ['eslint'], 'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
+let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 1
+let g:ale_set_signs = 0
 
 " Easy commands
 nnoremap ; :
