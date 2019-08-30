@@ -51,3 +51,5 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# weather
+alias weather='curl -4 http://v2.wttr.in/'
