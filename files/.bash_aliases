@@ -9,6 +9,8 @@ alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
 
+alias gbg="git branch -a | grep"
+
 alias gf="git fetch --prune"
 
 alias gp="git push -u"
