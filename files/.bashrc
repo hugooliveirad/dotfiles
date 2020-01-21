@@ -76,3 +76,5 @@ function pid-for-port {
   sudo netstat -nlp | grep ":$1"
 }
 
+# macOS Catalina please stop being annoying
+export BASH_SILENCE_DEPRECATION_WARNING=1
