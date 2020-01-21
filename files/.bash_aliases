@@ -1,7 +1,7 @@
 # git
 
 alias g="git"
-alias gc="git commit -v"
+alias gc="git commit --no-verify -v"
 alias gcf="git commit --fixup"
 alias gcs="git commit --squash"
 alias gco="git checkout"
