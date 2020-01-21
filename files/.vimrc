@@ -23,6 +23,7 @@ call plug#end()
 let mapleader = "\<Space>"
 
 " General configs
+set number
 set nocompatible      " remove compatibility quirks
 set modelines=0       " prevents security exploits
 set encoding=utf-8
