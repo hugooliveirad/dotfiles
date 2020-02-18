@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'mbbill/undotree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-airline/vim-airline'
 
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
@@ -119,10 +120,6 @@ nnoremap <leader>gdm :Gdiff origin/master<cr>
 " Easymotion bidings
 map  <leader>j <Plug>(easymotion-bd-f)
 map , <Plug>(easymotion-bd-f)
-
-
-" Folding bindings
-nnoremap <leader>f za
 
 " Navigation bindings
 nmap <C-h> <C-w>h
