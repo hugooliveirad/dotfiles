@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -ex
+
+DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
+
+# repository for peek
+sudo add-apt-repository ppa:peek-developers/stable -y
+
+# repository for timeshift
+sudo add-apt-repository -y ppa:teejee2008/ppa -y
+
+sudo apt update
+
+# basic tools
+sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python-pip -y
+
+# python 3
+sudo apt-get install python-dev python-pip python3-dev python3-pip python3-setuptools -y
+
+# installs basic applications
+sudo apt-get install vlc gimp transmission libreoffice timeshift peek -y
+
+# installs basic codecs
+apt-get install libavcodec-extra ffmpeg -y
+
+# install tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+# install git prompt
+if [ ! -d ~/.bash-git-prompt ]; then
+  git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+fi
+
+# install plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install plugs
+vim +:PlugInstall +:qa
