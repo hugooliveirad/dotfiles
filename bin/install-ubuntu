@@ -24,6 +24,12 @@ sudo apt-get install vlc gimp transmission libreoffice timeshift peek -y
 # installs basic codecs
 apt-get install libavcodec-extra ffmpeg -y
 
+# install nvm
+if [ ! -d ~/.nvm ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+fi
+
+
 # install tpm
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
