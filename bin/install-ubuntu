@@ -10,6 +10,9 @@ sudo add-apt-repository ppa:peek-developers/stable -y
 # repository for timeshift
 sudo add-apt-repository -y ppa:teejee2008/ppa -y
 
+# repository for Elixir
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb -P /tmp && sudo dpkg -i /tmp/erlang-solutions_2.0_all.deb && rm /tmp/erlang-solutions_2.0_all.deb
+
 sudo apt update
 
 # basic tools
@@ -18,11 +21,14 @@ sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python
 # python 3
 sudo apt-get install python-dev python-pip python3-dev python3-pip python3-setuptools -y
 
+# elixir
+sudo apt-get install esl-erlang elixir -y
+
 # installs basic applications
 sudo apt-get install vlc gimp transmission libreoffice timeshift peek -y
 
 # installs basic codecs
-apt-get install libavcodec-extra ffmpeg -y
+sudo apt-get install libavcodec-extra ffmpeg -y
 
 # install nvm
 if [ ! -d ~/.nvm ]; then
