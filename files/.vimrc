@@ -17,7 +17,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'arcticicestudio/nord-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+Plug 'jeffkreeftmeijer/vim-dim'
+"Plug 'slashmili/alchemist.vim'
 
 " End vim-plug
 call plug#end()
@@ -35,7 +36,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set hidden            " just hide the buffer when switching files
-set ruler             " show cursor position
 set textwidth=0
 set wrapmargin=0
 set autoindent
@@ -68,7 +68,6 @@ set undoreload=10000        " undo info survives reloads
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
 
 filetype plugin indent on
 
@@ -82,7 +81,7 @@ map <C-p> :FZF<CR>
 
 syntax enable
 color nord
-set background=dark
+set background=light
 
 let g:ale_fixers = {'javascript.jsx': ['prettier'], 'javascript': ['prettier']}
 let g:ale_linters = {'javascript.jsx': ['eslint'], 'javascript': ['eslint']}
