@@ -14,7 +14,7 @@ sudo add-apt-repository -y ppa:teejee2008/ppa -y
 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb -P /tmp && sudo dpkg -i /tmp/erlang-solutions_2.0_all.deb && rm /tmp/erlang-solutions_2.0_all.deb
 
 # repository for Ghostwriter
-sudo add-apt-repository ppa:wereturtle/ppa
+sudo add-apt-repository ppa:wereturtle/ppa -y
 
 sudo apt update
 
