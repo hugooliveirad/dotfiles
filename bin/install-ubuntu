@@ -26,7 +26,7 @@ sudo apt update
 apt-cache policy docker-ce
 
 # basic tools
-sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python-pip -y
+sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python-pip snapd -y
 
 # python 3
 sudo apt-get install python-dev python-pip python3-dev python3-pip python3-setuptools -y
@@ -48,6 +48,9 @@ sudo apt install ghostwriter -y
 
 # installs basic codecs
 sudo apt-get install libavcodec-extra ffmpeg -y
+
+# install snaps
+sudo snap install discord --classic
 
 # install nvm
 if [ ! -d ~/.nvm ]; then
