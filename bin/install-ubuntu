@@ -58,11 +58,19 @@ sudo apt-get install libavcodec-extra ffmpeg -y
 # install snaps
 sudo snap install discord --classic
 
+# install packages for Vitals GNOME Extension
+sudo apt install gir1.2-gtop-2.0 lm-sensors -y
+
+# install Vitals
+if [ ! -d ~/.local/share/gnome-shell/Vitals@CoreCoding.com ]; then
+  mkdir -p ~/.local/share/gnome-shell/extensions
+  git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
+fi
+
 # install nvm
 if [ ! -d ~/.nvm ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 fi
-
 
 # install tpm
 if [ ! -d ~/.tmux/plugins/tpm ]; then
