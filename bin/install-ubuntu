@@ -19,6 +19,10 @@ sudo add-apt-repository ppa:wereturtle/ppa -y
 # repository for Tweak
 sudo add-apt-repository universe -y
 
+# repository for Remmina
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next -y
+sudo apt update
+
 sudo apt update
 
 # prerequisites for Docker
@@ -60,6 +64,9 @@ sudo snap install discord --classic
 
 # install packages for Vitals GNOME Extension
 sudo apt install gir1.2-gtop-2.0 lm-sensors -y
+
+# install Remmina
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 
 # install Vitals
 if [ ! -d ~/.local/share/gnome-shell/extensions/Vitals\@CoreCoding.com ]; then
