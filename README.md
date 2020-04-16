@@ -2,9 +2,9 @@ dotfiles
 ---
 
 ```
-sudo bin/install-macos
+bin/install-macos
 #or
-sudo bin/install-ubuntu
+bin/install-ubuntu
 
 bin/setup
 ```
