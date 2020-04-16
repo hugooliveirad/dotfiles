@@ -16,6 +16,9 @@ wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb -P /tmp 
 # repository for Ghostwriter
 sudo add-apt-repository ppa:wereturtle/ppa -y
 
+# repository for Tweak
+sudo add-apt-repository universe -y
+
 sudo apt update
 
 # prerequisites for Docker
@@ -39,6 +42,9 @@ sudo apt-get install postgresql postgresql-contrib -y
 
 # docker
 sudo apt install docker-ce docker-compose -y
+
+# tweak
+sudo apt install gnome-tweak-tool -y
 
 # installs basic applications
 sudo apt-get install vlc gimp transmission libreoffice timeshift peek darktable -y
