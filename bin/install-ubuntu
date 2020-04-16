@@ -62,7 +62,7 @@ sudo snap install discord --classic
 sudo apt install gir1.2-gtop-2.0 lm-sensors -y
 
 # install Vitals
-if [ ! -d ~/.local/share/gnome-shell/Vitals@CoreCoding.com ]; then
+if [ ! -d ~/.local/share/gnome-shell/extensions/Vitals\@CoreCoding.com ]; then
   mkdir -p ~/.local/share/gnome-shell/extensions
   git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
 fi
