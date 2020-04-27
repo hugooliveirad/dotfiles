@@ -69,9 +69,14 @@ sudo apt install gir1.2-gtop-2.0 lm-sensors -y
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 
 # install Vitals
-if [ ! -d ~/.local/share/gnome-shell/extensions/Vitals\@CoreCoding.com ]; then
+if [ ! -d ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com ]; then
   mkdir -p ~/.local/share/gnome-shell/extensions
   git clone https://github.com/corecoding/Vitals.git ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
+fi
+
+if [ ! -d ~/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net ]; then
+  mkdir -p ~/.local/share/gnome-shell/extensions
+  git clone https://github.com/kgshank/gse-sound-output-device-chooser.git ~/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net
 fi
 
 # install nvm
