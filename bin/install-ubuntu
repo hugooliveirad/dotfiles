@@ -4,6 +4,9 @@ set -ex
 
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
+# repository for Firefox developer edition
+sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora -y
+
 # repository for peek
 sudo add-apt-repository ppa:peek-developers/stable -y
 
@@ -31,6 +34,9 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 apt-cache policy docker-ce
+
+# basic browsers
+sudo apt-get install firefox -y
 
 # basic tools
 sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python-pip snapd -y
