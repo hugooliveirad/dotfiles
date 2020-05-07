@@ -79,7 +79,7 @@ map <C-p> :FZF<CR>
 "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 syntax enable
-color nord
+colorscheme nord
 set background=light
 
 let g:ale_fixers = {'javascript.jsx': ['prettier'], 'javascript': ['prettier']}
