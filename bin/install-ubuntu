@@ -10,9 +10,6 @@ sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora -y
 # repository for peek
 sudo add-apt-repository ppa:peek-developers/stable -y
 
-# repository for timeshift
-sudo add-apt-repository -y ppa:teejee2008/ppa -y
-
 # repository for Elixir
 wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb -P /tmp && sudo dpkg -i /tmp/erlang-solutions_2.0_all.deb && rm /tmp/erlang-solutions_2.0_all.deb
 
@@ -24,25 +21,17 @@ sudo add-apt-repository universe -y
 
 # repository for Remmina
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next -y
-sudo apt update
 
 sudo apt update
-
-# prerequisites for Docker
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
 
 # basic browsers
 sudo apt-get install firefox -y
 
 # basic tools
-sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core python-pip snapd -y
+sudo apt-get install curl tree git vim tmux silversearcher-ag r-base-core snapd -y
 
 # python 3
-sudo apt-get install python-dev python-pip python3-dev python3-pip python3-setuptools -y
+sudo apt-get install python3-dev python3-pip python3-setuptools -y
 
 # elixir
 sudo apt-get install esl-erlang elixir inotify-tools -y
@@ -51,13 +40,13 @@ sudo apt-get install esl-erlang elixir inotify-tools -y
 sudo apt-get install postgresql postgresql-contrib -y
 
 # docker
-sudo apt install docker-ce docker-compose -y
+sudo apt install docker.io -y
 
 # tweak
 sudo apt install gnome-tweak-tool -y
 
 # installs basic applications
-sudo apt-get install vlc gimp transmission libreoffice timeshift peek darktable -y
+sudo apt-get install vlc gimp transmission libreoffice peek darktable -y
 
 # install ghostwriter
 sudo apt install ghostwriter -y
