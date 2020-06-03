@@ -5,6 +5,7 @@ set -e
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
 
+ln -sfv "$DOTFILES_DIR/files/.alacritty.yml" ~/.alacritty.yml
 ln -sfv "$DOTFILES_DIR/files/.bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/files/.bashrc" ~/.bashrc
 ln -sfv "$DOTFILES_DIR/files/.bash_aliases" ~/.bash_aliases

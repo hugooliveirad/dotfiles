@@ -89,6 +89,11 @@ if [ ! -d ~/.bash-git-prompt ]; then
   git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 fi
 
+# install elixir-ls
+if [ ! -d ~/.elixir-ls ]; then
+  git clone https://github.com/elixir-lsp/elixir-ls.git ~/.elixir-ls
+fi
+
 # install plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

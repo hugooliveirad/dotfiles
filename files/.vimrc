@@ -1,24 +1,26 @@
-" Hugo's vimfiles
-
 call plug#begin('~/.vim/plugged')
 
-Plug 'rking/ag.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ayu-theme/ayu-vim'
+
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'mbbill/undotree'
+
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'mbbill/undotree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
+
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+
 Plug 'arcticicestudio/nord-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'jeffkreeftmeijer/vim-dim'
-"Plug 'slashmili/alchemist.vim'
+
+Plug 'christoomey/vim-tmux-navigator'
 
 " End vim-plug
 call plug#end()
@@ -26,6 +28,7 @@ call plug#end()
 let mapleader = "\<Space>"
 
 " General configs
+set number
 set nocompatible      " remove compatibility quirks
 set modelines=0       " prevents security exploits
 set encoding=utf-8
@@ -70,34 +73,65 @@ set formatoptions=qrn1
 
 filetype plugin indent on
 
-" FZF
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-map <C-p> :FZF<CR>
-
-" set Vim-specific sequences for RGB colors
-"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
+set termguicolors
+let ayucolor="mirage"
 syntax enable
-colorscheme nord
-set background=light
+colorscheme ayu
 
-let g:ale_fixers = {'javascript.jsx': ['prettier'], 'javascript': ['prettier']}
-let g:ale_linters = {'javascript.jsx': ['eslint'], 'javascript': ['eslint']}
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-let g:ale_lint_on_text_changed = 1
+" NERDTree
+let g:NERDTreeIgnore = ['^node_modules$']
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+
+" ctrlp
+let g:ctrlp_max_files = 0
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files'],
+  \ },
+  \ 'fallback': 'find %s -type f'
+\ }
+
+" coc
+
+" trigger on tab
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" remap for rename current word
+nmap <F2> <Plug>(coc-rename)
+
+" remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+set updatetime=300 " longer updatetime provides poor user experience
+set shortmess+=c   " don't pass messages to ins-completion-menu
+set signcolumn=yes " always show so that code is not jumping around
 
 " Easy commands
 nnoremap ; :
 
-" Search with AG
-nnoremap <leader>a :Ag 
+" Directory navigation bindings
+nnoremap <leader>- :split<cr>:NERDTreeFind<cr>
+nnoremap <leader>\ :vsplit<cr>:NERDTreeFind<cr>
 
 " Directory navigation bindings
-nnoremap <leader>- :Hex<cr>
-nnoremap <leader>\ :Vex<cr>
-nnoremap <leader>. :Ex<cr>
+nnoremap <leader>. :NERDTreeFind<cr>
 
 " Tab navigation bindings
 nnoremap <End> gT
