@@ -25,8 +25,8 @@ HISTFILESIZE=20000
 PROMPT_COMMAND="history -a"
 
 # set defaul editor
-EDITOR="nvim"
-VISUAL="nvim"
+EDITOR="vim"
+VISUAL="vim"
 
 # iex history
 export ERL_AFLAGS="-kernel shell_history enabled"

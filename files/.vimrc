@@ -2,8 +2,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -83,14 +84,8 @@ let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 
-" ctrlp
-let g:ctrlp_max_files = 0
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files'],
-  \ },
-  \ 'fallback': 'find %s -type f'
-\ }
+" fzf
+nmap <silent> <C-p> :GFiles<CR>
 
 " coc
 
