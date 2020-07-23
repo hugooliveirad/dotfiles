@@ -15,8 +15,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'arcticicestudio/nord-vim'
 Plug 'elixir-editors/vim-elixir'
@@ -122,8 +122,8 @@ set signcolumn=yes " always show so that code is not jumping around
 nnoremap ; :
 
 " Directory navigation bindings
-nnoremap <leader>- :split<cr>:NERDTreeFind<cr>
-nnoremap <leader>\ :vsplit<cr>:NERDTreeFind<cr>
+nnoremap <leader>- :split<cr>
+nnoremap <leader>\ :vsplit<cr>
 
 " Directory navigation bindings
 nnoremap <leader>. :NERDTreeFind<cr>
