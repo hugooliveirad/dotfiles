@@ -12,8 +12,13 @@ fi
 # install basic tools
 brew update
 brew upgrade
-brew install nvm tmux git python python3 the_silver_searcher vim
+brew install tmux git python python3 the_silver_searcher vim nvim
 brew cask install spectacle iterm2 spotify licecap transmission homebrew/cask-versions/firefox-developer-edition
+
+# install nvm
+if [ ! -d ~/.nvm ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+fi
 
 # install plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
