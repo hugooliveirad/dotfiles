@@ -4,6 +4,7 @@ set -e
 
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
+mkdir -p ~/.config/nvim/
 
 ln -sfv "$DOTFILES_DIR/files/.alacritty.yml" ~/.alacritty.yml
 ln -sfv "$DOTFILES_DIR/files/.bash_profile" ~/.bash_profile

@@ -13,7 +13,7 @@ fi
 brew update
 brew upgrade
 brew install tmux git python python3 the_silver_searcher vim nvim
-brew cask install spectacle iterm2 spotify licecap transmission homebrew/cask-versions/firefox-developer-edition
+brew cask install spectacle iterm2 spotify licecap transmission alacritty homebrew/cask-versions/firefox-developer-edition
 
 # install nvm
 if [ ! -d ~/.nvm ]; then
@@ -24,8 +24,13 @@ fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# install nvim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # install plugs
 vim +:PlugInstall +:qa
+nvim +:PlugInstall +:qa
 
 # install rust
 if [ ! hash rustc 2>/dev/null ]; then
