@@ -34,3 +34,4 @@ key_bindings:
   - { key: N,      mods: Control, action: SpawnNewInstance }
   - { key: Equals, mods: Control, action: IncreaseFontSize }
   - { key: Minus,  mods: Control, action: DecreaseFontSize }
+  - { key: Q, mods: Control, chars: "\x11" }
