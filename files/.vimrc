@@ -84,9 +84,12 @@ colorscheme ayu
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
+let g:NERDTreeMapJumpNextSibling = '<Nop>'
+let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
 " fzf
-nmap <silent> <C-p> :GFiles<CR>
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+nmap <silent> <C-p> :FZF<CR>
 
 " coc
 
