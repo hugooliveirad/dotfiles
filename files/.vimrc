@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'arcticicestudio/nord-vim'
