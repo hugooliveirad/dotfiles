@@ -24,6 +24,9 @@ Plug 'elixir-editors/vim-elixir'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'tpope/vim-markdown'
+Plug 'junegunn/goyo.vim'
+
 " End vim-plug
 call plug#end()
 
@@ -40,7 +43,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set hidden            " just hide the buffer when switching files
-set textwidth=0
+set textwidth=0       " disable auto wrapping of code
 set wrapmargin=0
 set autoindent
 set backspace=2       " backspace over everything
@@ -59,7 +62,6 @@ set incsearch
 set gdefault
 set showmatch
 set hlsearch          " set highlight for search
-nnoremap <leader>c :noh<cr>
 
 set noswapfile
 set nobackup          " disable backup files
@@ -69,16 +71,45 @@ set undodir=$HOME/.vim/undo " persist undo info here
 set undolevels=1000
 set undoreload=10000        " undo info survives reloads
 
-set wrap
-set textwidth=79
-set formatoptions=qrn1
-
 filetype plugin indent on
 
 set termguicolors
 let ayucolor="mirage"
 syntax enable
 colorscheme ayu
+
+nnoremap <leader>c :noh<cr>
+
+" Markdown
+autocmd BufNewFile,BufRead *.md let b:coc_suggest_disable = 1 " disable coc suggest
+autocmd BufNewFile,BufRead *.md setlocal linebreak
+let g:markdown_fenced_languages = ['html', 'bash=sh', 'javascript', 'js=javascript', 'css']
+
+nnoremap <leader>m :Goyo<cr>
+
+function! s:goyo_enter()
+  set linebreak
+
+  " remap navigation keys to move along wrapped lines
+  noremap <buffer> k gk
+  noremap <buffer> j gj
+  noremap <buffer> 0 g0
+  noremap <buffer> $ g$
+endfunction
+
+function! s:goyo_leave()
+  set linebreak!
+  unmap <buffer> k
+  unmap <buffer> j
+  unmap <buffer> 0
+  unmap <buffer> $
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+" MDX
+autocmd BufNewFile,BufRead *.mdx set filetype=markdown.javascript
 
 " NERDTree
 let g:NERDTreeIgnore = ['^node_modules$']
@@ -117,6 +148,23 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocActionAsync('doHover')
+  endif
+endfunction
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <leader>d :CocDiagnostics<cr>
+nnoremap <leader>o :CocList outline<cr>
 
 set updatetime=300 " longer updatetime provides poor user experience
 set shortmess+=c   " don't pass messages to ins-completion-menu
