@@ -81,7 +81,6 @@ colorscheme ayu
 nnoremap <leader>c :noh<cr>
 
 " Markdown
-autocmd BufNewFile,BufRead *.md let b:coc_suggest_disable = 1 " disable coc suggest
 autocmd BufNewFile,BufRead *.md setlocal linebreak
 let g:markdown_fenced_languages = ['html', 'bash=sh', 'javascript', 'js=javascript', 'css']
 
@@ -123,6 +122,8 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nmap <silent> <C-p> :FZF<CR>
 
 " coc
+
+let g:coc_suggest_disable = 1 " disable coc suggest
 
 " trigger on tab
 inoremap <silent><expr> <TAB>
