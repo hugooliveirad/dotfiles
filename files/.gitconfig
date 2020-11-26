@@ -2,6 +2,9 @@
     name = Hugo Bessa
     email = eu@hugobessa.com.br
 
+[init]
+    defaultBranch = main
+
 [github]
     user = hugobessaa
 
