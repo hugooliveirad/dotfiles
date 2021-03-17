@@ -24,6 +24,9 @@ brew install --cask homebrew/cask-drivers/elgato-control-center homebrew/cask-dr
 # install nvm
 if [ ! -d ~/.nvm ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  nvm install 14
+  nvm use 14
+  nvm alias default 14
 fi
 
 # install plug
