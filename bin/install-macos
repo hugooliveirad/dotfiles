@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Change shell to bash
-chsh -s /bin/bash
 
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
@@ -9,6 +7,10 @@ DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 which -s brew
 if [[ $? != 0 ]] ; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  # Change shell to bash
+  chsh -s /bin/bash
+
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
