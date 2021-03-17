@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Change shell to bash
+chsh -s /bin/bash
+
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
 # install brew
