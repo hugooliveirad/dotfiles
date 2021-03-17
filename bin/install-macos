@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -ex
-
 DOTFILES_DIR=$(dirname $( cd $(dirname $0) ; pwd -P ))
 
 # install brew
