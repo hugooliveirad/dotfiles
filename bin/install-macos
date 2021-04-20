@@ -19,9 +19,9 @@ fi
 # install basic tools
 brew update
 brew upgrade
-brew install tmux git python python3 the_silver_searcher vim nvim
-brew install --cask rectangle iterm2 spotify cleanshot alfred transmission alacritty homebrew/cask-versions/firefox-developer-edition
-brew install --cask homebrew/cask-drivers/elgato-control-center homebrew/cask-drivers/elgato-stream-deck homebrew/cask-drivers/elgato-game-capture-hd
+arch -arm64 brew install tmux git python python3 the_silver_searcher vim nvim readline openssl gpg bash
+arch -arm64 brew install --cask rectangle iterm2 spotify cleanshot alfred transmission alacritty homebrew/cask-versions/firefox-developer-edition
+arch -arm64 brew install --cask homebrew/cask-drivers/elgato-control-center homebrew/cask-drivers/elgato-stream-deck homebrew/cask-drivers/elgato-game-capture-hd
 
 # install nvm
 if [ ! -d ~/.nvm ]; then
