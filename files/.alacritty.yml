@@ -30,8 +30,15 @@ colors:
     cyan: '#95E6CB'
     white: '#FFFFFF'
 
+
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: buttonless
+
 key_bindings:
-  - { key: N,      mods: Control, action: SpawnNewInstance }
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
-  - { key: Minus,  mods: Control, action: DecreaseFontSize }
+  - { key: N,      mods: Command, action: SpawnNewInstance }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Minus,  mods: Command, action: DecreaseFontSize }
   - { key: Q, mods: Control, chars: "\x11" }
