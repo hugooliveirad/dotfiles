@@ -164,6 +164,7 @@ endfunction
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <leader>d :CocDiagnostics<cr>
+nnoremap <leader>f :CocFix<cr>
 nnoremap <leader>o :CocList outline<cr>
 
 set updatetime=300 " longer updatetime provides poor user experience
