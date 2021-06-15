@@ -75,8 +75,16 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Util functions
-function pid-for-port {
-  sudo netstat -nlp | grep ":$1"
+function pids-for-port {
+  lsof -t -i tcp:"$1"
+}
+
+function kill-port {
+  lsof -t -i tcp:"$1" | xargs kill -15
+}
+
+function force-kill-port {
+  lsof -t -i tcp:"$1" | xargs kill -9
 }
 
 # Android Studio
