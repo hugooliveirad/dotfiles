@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'ayu-theme/ayu-vim'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -17,14 +18,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-
-Plug 'arcticicestudio/nord-vim'
 Plug 'elixir-editors/vim-elixir'
-
-Plug 'christoomey/vim-tmux-navigator'
-
 Plug 'tpope/vim-markdown'
 Plug 'junegunn/goyo.vim'
+Plug 'mattn/emmet-vim'
+
+Plug 'christoomey/vim-tmux-navigator'
 
 " End vim-plug
 call plug#end()
@@ -113,6 +112,7 @@ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.javascript
 let g:NERDTreeIgnore = ['^node_modules$']
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
+let NERDTreeQuitOnOpen=1
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
