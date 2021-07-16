@@ -39,7 +39,8 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # use bash-git-prompt
-GIT_PROMPT_THEME=Min
+GIT_PROMPT_END_USER="\n$ "
+GIT_PROMPT_END_ROOT="\n# "
 source ~/.bash-git-prompt/gitprompt.sh
 
 # enable color support of ls and also add handy aliases
