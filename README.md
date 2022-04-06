@@ -8,3 +8,5 @@ bin/install-ubuntu
 
 bin/setup
 ```
+
+Use Hack font https://sourcefoundry.org/hack/
