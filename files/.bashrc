@@ -101,3 +101,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # macOS Catalina please stop being annoying
 export BASH_SILENCE_DEPRECATION_WARNING=1
+. "$HOME/.cargo/env"

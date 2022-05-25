@@ -7,3 +7,4 @@ if [ -f ~/.profile ]; then
 fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"

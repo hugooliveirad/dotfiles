@@ -27,6 +27,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 
 " Prose plugins
 Plug 'godlygeek/tabular'
@@ -277,13 +278,13 @@ nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>j
 
 " Fugitive bindings
-"nnoremap <leader>gs :NERDTreeClose<cr>:Git<cr>
+nnoremap <leader>gs :NERDTreeClose<cr>:Git<cr>
 nnoremap <leader>gdd :Gdiffsplit<cr>
 nnoremap <leader>gdm :Gdiffsplit origin/main<cr>
 nnoremap <leader>gdn :Gdiffsplit origin/master<cr>
 
 " Vimagit Config and bindings
-nnoremap <leader>gs :Magit<cr>
+"nnoremap <leader>gs :Magit<cr>
 
 " GitGutter bindings
 nnoremap <leader>ghn :GitGutterNextHunk<cr>

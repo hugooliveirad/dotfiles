@@ -1,5 +1,4 @@
-dotfiles
----
+## dotfiles
 
 ```
 bin/install-macos
