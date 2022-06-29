@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'sainnhe/everforest'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 
@@ -88,20 +90,15 @@ set undoreload=10000        " undo info survives reloads
 
 filetype plugin indent on
 
-" Ayu Colorscheme
-lua << EOF
-require('ayu').setup({
-    mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    overrides = {}, -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-})
-EOF
-
 set termguicolors
-let ayucolor="mirage"
 let g:gruvbox_contrast_dark="medium"
 let g:gruvbox_sign_column="bg0"
 let g:gruvbox_bold=0
 let g:gruvbox_invert_selection=0
+
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+let g:everforest_ui_contrast = 'low'
 syntax enable
 colorscheme gruvbox
 set background=dark
