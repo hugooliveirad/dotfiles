@@ -287,8 +287,8 @@ nnoremap <leader>gdn :Gdiffsplit origin/master<cr>
 "nnoremap <leader>gs :Magit<cr>
 
 " GitGutter bindings
-nnoremap <leader>ghn :GitGutterNextHunk<cr>
-nnoremap <leader>ghp :GitGutterPrevHunk<cr>
+nnoremap <silent> ]g :GitGutterNextHunk<cr>
+nnoremap <silent> [g :GitGutterPrevHunk<cr>
 
 " Easymotion bidings
 map  <leader>j <Plug>(easymotion-bd-f)
