@@ -253,6 +253,9 @@ set updatetime=300 " longer updatetime provides poor user experience
 set shortmess+=c   " don't pass messages to ins-completion-menu
 set signcolumn=number " always show so that code is not jumping around
 
+" Disable coc on Markdown files
+autocmd FileType markdown let b:coc_suggest_disable = 1
+
 " Easy commands
 nnoremap ; :
 
