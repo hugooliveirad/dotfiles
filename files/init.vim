@@ -24,12 +24,14 @@ Plug 'jreybert/vimagit'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 
+" Programming languages support
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'wuelnerdotexe/vim-astro'
 
 " Prose plugins
 Plug 'godlygeek/tabular'
@@ -258,6 +260,9 @@ set signcolumn=number " always show so that code is not jumping around
 
 " Disable coc on Markdown files
 autocmd FileType markdown let b:coc_suggest_disable = 1
+
+" Astro
+let g:astro_typescript = 'enable'
 
 " Easy commands
 nnoremap ; :
