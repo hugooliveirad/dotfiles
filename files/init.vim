@@ -315,11 +315,11 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " Cursor navigation bindings
-nmap <C-b> <C-b>zz
-nmap <C-f> <C-f>zz
-nmap n nzz
-nmap N Nzz
-nmap J mzJ`z
+nnoremap <C-b> <C-b>zz
+nnoremap <C-f> <C-f>zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap J mzJ`z
 
 " Saving bindings
 nmap <c-s> :w<CR>
