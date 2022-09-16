@@ -298,18 +298,28 @@ nnoremap <leader>gdn :Gdiffsplit origin/master<cr>
 nnoremap <silent> ]g :GitGutterNextHunk<cr>
 nnoremap <silent> [g :GitGutterPrevHunk<cr>
 
-" Easymotion bidings
+" Easymotion bindings
 map  <leader>j <Plug>(easymotion-bd-f)
 map , <Plug>(easymotion-bd-f)
+
+" Undotree bindings
+nmap <leader>u :UndotreeShow<cr>
 
 " Restore older vim Y behavior (copy entire line)
 nmap Y yy
 
-" Navigation bindings
+" Window navigation bindings
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+" Cursor navigation bindings
+nmap <C-b> <C-b>zz
+nmap <C-f> <C-f>zz
+nmap n nzz
+nmap N Nzz
+nmap J mzJ`z
 
 " Saving bindings
 nmap <c-s> :w<CR>
