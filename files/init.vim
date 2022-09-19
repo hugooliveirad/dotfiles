@@ -112,7 +112,7 @@ nnoremap <leader>c :noh<cr>
 autocmd BufNewFile,BufRead *.md setlocal linebreak
 let g:markdown_fenced_languages = ['html', 'bash=sh', 'javascript', 'js=javascript', 'css']
 
-nnoremap <leader>m :Goyo<cr>
+nnoremap <leader>z :Goyo<cr>
 
 function! s:goyo_enter()
   set linebreak
