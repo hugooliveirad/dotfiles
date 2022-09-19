@@ -298,6 +298,15 @@ nnoremap <leader>gdn :Gdiffsplit origin/master<cr>
 nnoremap <silent> ]g :GitGutterNextHunk<cr>
 nnoremap <silent> [g :GitGutterPrevHunk<cr>
 
+" Vim Mergetool
+let g:mergetool_layout = 'mr,b'
+nmap <expr> <C-Left> &diff? '<Plug>(MergetoolDiffExchangeLeft)' : '<C-Left>'
+nmap <expr> <C-Right> &diff? '<Plug>(MergetoolDiffExchangeRight)' : '<C-Right>'
+nmap <expr> <C-Down> &diff? '<Plug>(MergetoolDiffExchangeDown)' : '<C-Down>'
+nmap <expr> <C-Up> &diff? '<Plug>(MergetoolDiffExchangeUp)' : '<C-Up>'
+
+nnoremap <leader>mt <Plug>(MergetoolToggle)
+
 " Easymotion bindings
 map  <leader>j <Plug>(easymotion-bd-f)
 map , <Plug>(easymotion-bd-f)
