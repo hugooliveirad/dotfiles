@@ -22,7 +22,6 @@ Plug 'samoshkin/vim-mergetool'
 Plug 'jreybert/vimagit'
 
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
 
 " Programming languages support
 Plug 'yuezk/vim-js'
@@ -307,9 +306,17 @@ nmap <expr> <C-Up> &diff? '<Plug>(MergetoolDiffExchangeUp)' : '<C-Up>'
 
 nnoremap <leader>mt <Plug>(MergetoolToggle)
 
-" Easymotion bindings
-map  <leader>j <Plug>(easymotion-bd-f)
-map , <Plug>(easymotion-bd-f)
+" Smartf bindings
+nmap f <Plug>(coc-smartf-forward)
+nmap F <Plug>(coc-smartf-backward)
+nmap , <Plug>(coc-smartf-repeat)
+
+augroup Smartf
+  autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#6638F0
+  autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#504945
+augroup end
+
+"map , <Plug>(easymotion-bd-f)
 
 " Undotree bindings
 nmap <leader>u :UndotreeShow<cr>
