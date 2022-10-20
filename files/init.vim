@@ -312,8 +312,8 @@ nmap F <Plug>(coc-smartf-backward)
 nmap , <Plug>(coc-smartf-repeat)
 
 augroup Smartf
-  autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#6638F0
-  autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#504945
+  autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#f9bd2e
+  autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#f9bd2e
 augroup end
 
 "map , <Plug>(easymotion-bd-f)
