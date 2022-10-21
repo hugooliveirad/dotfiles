@@ -1,6 +1,7 @@
 [user]
     name = Hugo Bessa
     email = eu@hugobessa.com.br
+	signingkey = CA1B2A2204794F8F
 
 [init]
     defaultBranch = main
@@ -68,3 +69,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
