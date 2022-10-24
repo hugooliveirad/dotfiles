@@ -1,7 +1,7 @@
 [user]
-    name = Hugo Bessa
-    email = eu@hugobessa.com.br
-	signingkey = CA1B2A2204794F8F
+    name = Hugo de Oliveira
+    email = hugo@triangulo.dev
+    signingkey = CA1B2A2204794F8F
 
 [init]
     defaultBranch = main
@@ -65,9 +65,9 @@
 [rebase]
     autosquash = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [commit]
-	gpgsign = true
+    gpgsign = true
