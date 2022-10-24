@@ -68,5 +68,6 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Install pinentry-mac to gpg-agent
 if grep -q "pinentry-program" ~/.gnupg/gpg-agent.conf; then
-    echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+    echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf;
+    killall gpg-agent
 fi
