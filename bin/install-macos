@@ -21,15 +21,16 @@ brew update
 brew upgrade
 arch -arm64 brew install tmux git python python3 the_silver_searcher vim nvim readline openssl gpg bash ripgrep
 arch -arm64 brew install postgres poppler
+arch -arm64 brew install pinentry-mac
 arch -arm64 brew install --cask rectangle iterm2 spotify cleanshot alfred transmission alacritty homebrew/cask-versions/firefox-developer-edition
 arch -arm64 brew install --cask homebrew/cask-drivers/elgato-control-center homebrew/cask-drivers/elgato-stream-deck homebrew/cask-drivers/elgato-game-capture-hd
 
 # install nvm
 if [ ! -d ~/.nvm ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-  nvm install 14
-  nvm use 14
-  nvm alias default 14
+  nvm install 16
+  nvm use 16
+  nvm alias default 16
 fi
 
 # install plug
