@@ -161,11 +161,11 @@ let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 "nmap <silent> <C-p> :FZF<CR>
 
 " telescope
-nmap <silent> <C-p> :Telescope git_files<CR>
+nmap <silent> <C-p> :Telescope find_files<CR>
 nmap <silent> <C-y> :Telescope buffers<CR>
 nnoremap <leader>b :Telescope buffers<CR>
 
-nnoremap <leader>tf :Telescope find_files<cr>
+nnoremap <leader>tf :Telescope git_files<cr>
 nnoremap <leader>tg :Telescope live_grep<cr>
 nnoremap <leader>ta :Telescope grep_string<cr>
 
