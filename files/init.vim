@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'sainnhe/everforest'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -97,9 +96,6 @@ let g:gruvbox_sign_column="bg0"
 let g:gruvbox_bold=0
 let g:gruvbox_invert_selection=0
 
-let g:everforest_background = 'hard'
-let g:everforest_better_performance = 1
-let g:everforest_ui_contrast = 'low'
 syntax enable
 colorscheme gruvbox
 set background=dark
