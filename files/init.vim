@@ -237,7 +237,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nnoremap <silent><nowait> <leader>d  :<C-u>CocList diagnostics<cr>
-nnoremap <leader>f <Plug>(coc-codeaction)
+nnoremap <leader>f <Plug>(coc-codeaction-line)
+nnoremap <leader>af <Plug>(coc-codeaction)
 nnoremap <leader>o :CocList outline<cr>
 nnoremap <silent><nowait> <space>x  :<C-u>CocList commands<cr>
 
