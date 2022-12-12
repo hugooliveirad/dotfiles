@@ -37,6 +37,7 @@ alias be="bundle exec"
 # vim
 
 alias v="nvim ."
+alias vim="nvim"
 
 # yarn
 
