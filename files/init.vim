@@ -149,7 +149,7 @@ autocmd BufNewFile,BufRead *.mdx set filetype=markdown.javascript
 "nmap <silent> <C-p> :FZF<CR>
 
 " telescope
-nmap <silent> <C-p> :Telescope find_files<CR>
+nmap <silent> <C-p> :Telescope find_files hidden=true<CR>
 nmap <silent> <C-y> :Telescope buffers<CR>
 nnoremap <leader>b :Telescope buffers<CR>
 
