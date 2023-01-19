@@ -15,4 +15,5 @@ ln -sfv "$DOTFILES_DIR/files/.gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/files/.rgignore" ~/.rgignore
 ln -sfv "$DOTFILES_DIR/files/.tmux.conf" ~/.tmux.conf
 ln -sfv "$DOTFILES_DIR/files/.tmuxp.yaml" ~/.tmuxp.yaml
+ln -sfv "$DOTFILES_DIR/files/.tool-versions" ~/.tool-versions
 ln -sfv "$DOTFILES_DIR/files/init.vim" ~/.config/nvim/init.vim
