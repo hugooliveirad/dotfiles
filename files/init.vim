@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'junegunn/fzf.vim'
@@ -144,6 +145,13 @@ nnoremap <leader>ha :<c-u>HSRmHighlight rm_all<cr>
 " MDX
 autocmd BufNewFile,BufRead *.mdx set filetype=markdown.javascript
 
+" NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
+let NERDTreeQuitOnOpen=1
+let g:NERDTreeMapJumpNextSibling = '<Nop>'
+let g:NERDTreeMapJumpPrevSibling = '<Nop>'
+
 " fzf
 "let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 "nmap <silent> <C-p> :FZF<CR>
@@ -260,24 +268,21 @@ nnoremap <leader>- :split<cr>
 nnoremap <leader>\ :vsplit<cr>
 
 " Directory navigation bindings
-nnoremap <leader>. :Vex<cr>
-
-" Fix <C-l> from vim-tmux-navigator not workin on Netrw
-nmap <buffer> <silent> <nowait> <c-e> <Plug>NetrwRefresh
+nnoremap <leader>. :NERDTreeFind<cr>
 
 " Tab navigation bindings
 nnoremap <End> gT
 nnoremap <Home> gt
 
 " Edit vimrc
-nmap <leader><leader><leader><leader><leader><leader>l <Plug>NetrwRefresh
+nnoremap <leader>ev :tabe $HOME/.config/nvim/init.vim<cr>
 
 " Splitting bindings
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>j
 
 " Fugitive bindings
-nnoremap <leader>gs :Git<cr>
+nnoremap <leader>gs :NERDTreeClose<cr>:Git<cr>
 nnoremap <leader>gdd :Gdiffsplit<cr>
 nnoremap <leader>gdm :Gdiffsplit origin/main<cr>
 nnoremap <leader>gdn :Gdiffsplit origin/master<cr>
