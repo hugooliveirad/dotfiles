@@ -74,11 +74,6 @@ if [ ! -d ~/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgsh
   git clone https://github.com/kgshank/gse-sound-output-device-chooser.git ~/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net
 fi
 
-# install nvm
-if [ ! -d ~/.nvm ]; then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-fi
-
 # install tpm
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

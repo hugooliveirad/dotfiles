@@ -25,14 +25,6 @@ arch -arm64 brew install pinentry-mac
 arch -arm64 brew install --cask rectangle iterm2 spotify cleanshot alfred transmission alacritty homebrew/cask-versions/firefox-developer-edition
 arch -arm64 brew install --cask homebrew/cask-drivers/elgato-control-center homebrew/cask-drivers/elgato-stream-deck homebrew/cask-drivers/elgato-game-capture-hd
 
-# install nvm
-if [ ! -d ~/.nvm ]; then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-  nvm install 16
-  nvm use 16
-  nvm alias default 16
-fi
-
 # install plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
