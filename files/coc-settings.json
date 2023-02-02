@@ -1,0 +1,19 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "json",
+    "astro"
+  ],
+  "eslint.enable": true,
+  "prettier.enable": true,
+  "signature.enable": false,
+  "signature.hideOnTextChange": true,
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": true,
+  "codeLens.enable": false,
+  "smartf.timeout": 0
+}

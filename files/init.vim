@@ -196,6 +196,14 @@ set updatetime=300 " longer updatetime provides poor user experience
 " set shortmess+=c   " don't pass messages to ins-completion-menu
 set signcolumn=yes " always show so that code is not jumping around
 
+let g:coc_global_extensions = [
+ \'coc-elixir',
+ \'coc-prettier',
+ \'coc-tsserver',
+ \'coc-eslint',
+ \'coc-smartf'
+\]
+
 autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
 
 inoremap <silent><expr> <c-space> coc#refresh()
