@@ -207,6 +207,7 @@ let g:coc_global_extensions = [
 autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
 
 inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " remap for rename current word
 nmap <F2> <Plug>(coc-rename)
