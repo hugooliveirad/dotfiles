@@ -215,6 +215,9 @@ nmap <F2> <Plug>(coc-rename)
 " show signature help in insert mode
 inoremap <silent> <F1> <C-r>=CocActionAsync('showSignatureHelp')<CR>
 
+" <cr> to confirm auto complete option
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
 " remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
