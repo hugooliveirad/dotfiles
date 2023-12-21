@@ -8,7 +8,9 @@
   "signature.hideOnTextChange": true,
   "suggest.autoTrigger": "trigger",
   "suggest.noselect": true,
+  "suggest.insertMode": "insert",
   "codeLens.enable": false,
   "smartf.timeout": 0,
+  "workspace.ignoredFolders": ["$HOME", "$HOME/.cargo/**", "$HOME/.rustup/**"],
   "rust-analyzer.disableProgressNotifications": true
 }
