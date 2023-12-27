@@ -56,3 +56,6 @@ alias l='ls -CF'
 
 # weather
 alias weather='curl -4 http://v2.wttr.in/'
+
+# doppler
+alias dr="doppler run"
