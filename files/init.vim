@@ -43,6 +43,8 @@ Plug 'morhetz/gruvbox'
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'vim-airline/vim-airline'
+
 " End vim-plug
 call plug#end()
 
