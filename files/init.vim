@@ -154,6 +154,11 @@ let NERDTreeQuitOnOpen=1
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
+" Airline
+let g:airline_section_a = ""
+let g:airline_section_b = ""
+let g:airline_section_x = ""
+
 " fzf
 "let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 "nmap <silent> <C-p> :FZF<CR>
