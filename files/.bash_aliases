@@ -18,7 +18,7 @@ alias gpf="git push --force-with-lease"
 alias gpl="git pull"
 
 alias gr="git rebase"
-alias grm="git fetch --prune && git rebase origin/master -i"
+alias grm="git fetch --prune && git rebase origin/main -i"
 
 alias grh="git reset HEAD"
 
