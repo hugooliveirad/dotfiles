@@ -40,6 +40,8 @@ Plug 'Pocco81/HighStr.nvim'
 Plug 'Shatur/neovim-ayu'
 Plug 'morhetz/gruvbox'
 
+Plug 'github/copilot.vim'
+
 " Tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -287,10 +289,6 @@ nnoremap <Home> gt
 " Edit vimrc
 nnoremap <leader>ev :tabe $HOME/.config/nvim/init.vim<cr>
 
-" Splitting bindings
-nnoremap <leader>v <C-w>v<C-w>l
-nnoremap <leader>h <C-w>s<C-w>j
-
 " Fugitive bindings
 nnoremap <leader>gs :NERDTreeClose<cr>:Git<cr>
 nnoremap <leader>gdd :Gdiffsplit<cr>
@@ -327,6 +325,12 @@ augroup end
 
 " Undotree bindings
 nmap <leader>u :UndotreeShow<cr>
+
+" Copilot
+inoremap <C-G> <Plug>(copilot-suggest)
+inoremap <C-h> <Plug>(copilot-previous)
+inoremap <C-l> <Plug>(copilot-next)
+inoremap <C-j> <Plug>(copilot-accept-line)
 
 " Restore older vim Y behavior (copy entire line)
 nmap Y yy
