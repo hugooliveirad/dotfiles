@@ -12,5 +12,6 @@
   "codeLens.enable": false,
   "smartf.timeout": 0,
   "workspace.ignoredFolders": ["$HOME", "$HOME/.cargo/**", "$HOME/.rustup/**"],
-  "rust-analyzer.disableProgressNotifications": true
+  "rust-analyzer.disableProgressNotifications": true,
+  "tsserver.log": "verbose"
 }
