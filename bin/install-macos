@@ -21,6 +21,7 @@ fi
 brew update
 brew upgrade
 brew install tmux git python python3 the_silver_searcher vim nvim readline openssl gpg bash ripgrep
+brew install awscli pipx
 brew install postgres poppler
 brew install pinentry-mac
 #brew install --cask rectangle iterm2 transmission homebrew/cask-versions/firefox-developer-edition
