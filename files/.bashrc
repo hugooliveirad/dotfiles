@@ -28,6 +28,13 @@ PROMPT_COMMAND="history -a"
 EDITOR="nvim"
 VISUAL="nvim"
 
+# source env if .env exists
+if [ -f ~/.env ]; then
+    . ~/.env
+  else
+    echo ".env file is not configured"
+fi
+
 # iex history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
